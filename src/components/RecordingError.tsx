@@ -25,7 +25,7 @@ const RecordingError = (props: IProps) => {
         <div className="close" onClick={props.onClose}>
           <Icon icon={closeIcon} />
         </div>
-        <p>
+        <p className="error-message">
           <T
             id={
               isIOS
@@ -34,16 +34,14 @@ const RecordingError = (props: IProps) => {
             }
           />
         </p>
-        {/* TODO: Re-enable the mobile app links once the app is rebranded
-        to Tarteel and supports follow-along  */}
-        {/* <a href={config('androidAppLink')}>Android</a>
-        <a href={config('IOSAppLink')}>iOS</a> */}
+        <a className="app-link" href={config('androidAppLink')}>Android</a>
+        <a className="app-link" href={config('IOSAppLink')}>iOS</a>
       </MobileView>
       <BrowserView>
         <div className="close" onClick={props.onClose}>
           <Icon icon={closeIcon} />
         </div>
-        <div className={`msg ${classes}`}>
+        <div className={`error-message ${classes}`}>
           {!props.message ? (
             <T id={KEYS.RECORDING_ERROR_MESSAGE_DESKTOP} />
           ) : (
@@ -73,14 +71,16 @@ const Container = styled.div`
     right: 10px;
     top: 5px;
   }
-  .msg {
-    margin: 1em 10px;
+  .error-message {
+    margin: 1em 2%;
 
     &.rtl {
       direction: rtl;
     }
   }
-  a {
+
+  
+  div > .app-link {
     color: #fff;
     text-decoration: none;
     border: 1px solid #fff;

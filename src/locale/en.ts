@@ -262,9 +262,9 @@ const EN: IShape = {
 
     // RECORDING ERROR
     [KEYS.RECORDING_ERROR_MESSAGE_MOBILE_GENERIC]:
-      "It doesn't look like you have microphone permissions enabled. Switch to another browser and make sure to enable mic permissions.",
+      "It doesn't look like you have microphone permissions enabled. Make sure to enable mic permissions or download the mobile app: ",
     [KEYS.RECORDING_ERROR_MESSAGE_IOS]:
-      "It doesn't look like you have microphone permissions enabled. Switch to Safari and make sure to enable mic permissions.",
+      "It doesn't look like you have microphone permissions enabled. Switch to Safari and enable mic permissions or download the mobile app: ",
     [KEYS.RECORDING_ERROR_MESSAGE_DESKTOP]:
       'To upload recordings, please enable microphone access, or use a different browser.',
 
