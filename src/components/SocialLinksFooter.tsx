@@ -20,7 +20,8 @@ const SocialLinksContainer = styled.div`
   color: #c7c7c7;
   font-size: 14px;
   width: 100%;
-
+  text-align: center;
+  
   > a {
     text-decoration: none;
     color: #c7c7c7 !important;
