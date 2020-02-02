@@ -4,6 +4,7 @@ import { Auth } from 'aws-amplify';
 import { History } from 'history';
 
 import Navbar from '../../components/Navbar';
+import SocialLinksFooter from '../../components/SocialLinksFooter';
 import VerifyPassword from '../../components/VerifyPassword';
 import ForgotPasswordForm from '../../components/ForgotPasswordForm';
 import NewPasswordVerified from '../../components/NewPasswordVerified';
@@ -68,6 +69,7 @@ class ForgotPassword extends React.Component<IProps, IState> {
             <ForgotPasswordForm handleReset={this.handleReset} />
           )}
         </div>
+        <SocialLinksFooter />
       </Container>
     );
   }

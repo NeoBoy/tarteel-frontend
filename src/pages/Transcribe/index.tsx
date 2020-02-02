@@ -24,6 +24,7 @@ import { getSurahName } from '../../helpers/ayahs';
 import TranscribeAyah from './TranscribeAyah';
 import RecordingButton from '../../components/RecordingButton';
 import Navbar from '../../components/Navbar';
+import SocialLinksFooter from '../../components/SocialLinksFooter';
 import {
   Container,
   TranslationWrapper,
@@ -137,7 +138,7 @@ class Transcribe extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     const isTranslationMode = false;
-      // queryString.parseUrl(window.location.href).query.mode === 'translation';
+    // queryString.parseUrl(window.location.href).query.mode === 'translation';
 
     this.state = {
       isRecording: false,
@@ -235,7 +236,7 @@ class Transcribe extends React.Component<IProps, IState> {
     if (DEBUG) {
       console.log(
         `TRANSCRIBE: Recording button clicked. isLoading: ${
-          this.state.isLoading
+        this.state.isLoading
         }`
       );
     }
@@ -297,7 +298,7 @@ class Transcribe extends React.Component<IProps, IState> {
     if (DEBUG) {
       console.log(
         `TRANSCRIBE EVENT: Match Found. surahNum: ${
-          match.chapter_id
+        match.chapter_id
         }, ayahNum: ${match.verse_number}, wordCount: ${wordCount}`
       );
     }
@@ -338,7 +339,7 @@ class Transcribe extends React.Component<IProps, IState> {
           ...prevPromises,
           fetch(
             `https://quran.com/api/api/v3/chapters/${
-              ayah.chapter_id
+            ayah.chapter_id
             }/verses?offset=${offset}&limit=${50}`
           ),
         ],
@@ -404,7 +405,7 @@ class Transcribe extends React.Component<IProps, IState> {
     if (DEBUG) {
       console.log(
         `TRANSCRIBE EVENT: Ayah Found. surahNum: ${
-          ayahShape.chapter_id
+        ayahShape.chapter_id
         } ayahNum: ${ayahShape.verse_number}`
       );
     }
@@ -470,7 +471,7 @@ class Transcribe extends React.Component<IProps, IState> {
     if (DEBUG) {
       console.log(
         `TRANSCRIBE EVENT: Speech Result. result: ${result.text}, isFinal: ${
-          result.isFinal
+        result.isFinal
         }`
       );
     }
@@ -581,8 +582,8 @@ class Transcribe extends React.Component<IProps, IState> {
               ) : !this.state.isRecording ? (
                 <Icon icon={micA} size={30} />
               ) : (
-                <Icon icon={stop} size={30} />
-              )}
+                    <Icon icon={stop} size={30} />
+                  )}
             </RecordingButton>
             {!this.state.isTranslationMode && (
               <ToggleButtonWrapper>
@@ -636,10 +637,10 @@ class Transcribe extends React.Component<IProps, IState> {
             {ayahFound || partialQuery ? null : isRecording ? (
               <div className="ayah-info"> Listening... </div>
             ) : (
-              <div className="ayah-info">
-                <T id={KEYS.WAITING_FOR_INPUT} />
-              </div>
-            )}
+                <div className="ayah-info">
+                  <T id={KEYS.WAITING_FOR_INPUT} />
+                </div>
+              )}
             {/* render partial query until ayah found  */}
             {!currentAyah && <p className="partial-query">{partialQuery} </p>}
             {/* render finished ayahs in the follow along mode */}
@@ -664,16 +665,16 @@ class Transcribe extends React.Component<IProps, IState> {
                   </TranslationModeWrapper>
                 )
               ) : (
-                <ReadingMode
-                  isMemorizationMode={isMemorizationMode}
-                  {...{
-                    currentAyah,
-                    currentSurah,
-                    currentTranscribedIndex,
-                    previousAyahs,
-                  }}
-                />
-              )}
+                  <ReadingMode
+                    isMemorizationMode={isMemorizationMode}
+                    {...{
+                      currentAyah,
+                      currentSurah,
+                      currentTranscribedIndex,
+                      previousAyahs,
+                    }}
+                  />
+                )}
             </div>
           </div>
         )}
@@ -756,6 +757,7 @@ class Transcribe extends React.Component<IProps, IState> {
             {this.renderAyahsContent()}
             {this.renderFooter()}
           </main>
+          <SocialLinksFooter />
         </Fullscreen>
       </Container>
     );

@@ -9,6 +9,7 @@ import { sad } from 'react-icons-kit/icomoon/sad';
 import T from '../../components/T';
 import KEYS from '../../locale/keys';
 import Navbar from '../../components/Navbar';
+import SocialLinksFooter from '../../components/SocialLinksFooter';
 
 interface IProps {
   intl: InjectedIntl;
@@ -37,6 +38,7 @@ class AyahNotFound extends React.Component<IProps> {
             </b>
           </Link>
         </div>
+        <SocialLinksFooter />
       </Container>
     );
   }

@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import config from '../../../config';
 import { Container } from './styles';
 import Navbar from '../../components/Navbar';
+import SocialLinksFooter from '../../components/SocialLinksFooter';
 import { InjectedIntl, injectIntl } from 'react-intl';
 import { IDataset } from '../../types/GlobalState';
 import T from '../../components/T';
@@ -58,6 +59,7 @@ class DataSet extends React.Component<IProps, never> {
             })}
           </div>
         </div>
+        <SocialLinksFooter />
       </Container>
     );
   }

@@ -8,6 +8,7 @@ import validate from 'validate.js';
 import Helmet from 'react-helmet';
 
 import Navbar from '../../components/Navbar';
+import SocialLinksFooter from '../../components/SocialLinksFooter';
 import Input from '../../components/Input';
 import FooterButton from '../../components/FooterButton';
 import T from '../../components/T';
@@ -155,7 +156,9 @@ class ContactUs extends React.Component<IProps, IState> {
               placeholder={intl.formatMessage({
                 id: KEYS.EMAIL_ADDRESS_INPUT_PLACEHOLDER,
               })}
-              label={intl.formatMessage({ id: KEYS.EMAIL_ADDRESS_INPUT_LABEL })}
+              label={intl.formatMessage({
+                id: KEYS.EMAIL_ADDRESS_INPUT_LABEL,
+              })}
               name={'email'}
               onChange={this.handleChange}
             />
@@ -163,7 +166,9 @@ class ContactUs extends React.Component<IProps, IState> {
               placeholder={intl.formatMessage({
                 id: KEYS.MESSAGE_TEXTAREA_PLACEHOLDER,
               })}
-              label={intl.formatMessage({ id: KEYS.MESSAGE_TEXTAREA_LABEL })}
+              label={intl.formatMessage({
+                id: KEYS.MESSAGE_TEXTAREA_LABEL,
+              })}
               name={'message'}
               type={'textarea'}
               cols="30"
@@ -182,6 +187,7 @@ class ContactUs extends React.Component<IProps, IState> {
         <ReactNotification
           ref={(C: JSX.Element) => (this.notificationDOMRef = C)}
         />
+        <SocialLinksFooter />
       </Container>
     );
   }

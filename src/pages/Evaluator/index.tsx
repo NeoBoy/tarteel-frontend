@@ -25,6 +25,7 @@ import {
 } from '../../api/evaluator';
 import Modal from '../../components/Modal';
 import Navbar from '../../components/Navbar';
+import SocialLinksFooter from '../../components/SocialLinksFooter';
 import { commaFormatter } from '../../helpers/utils';
 import { createAudioMeter } from '../../helpers/volume-meter';
 import IAyahShape from '../../shapes/IAyahShape';
@@ -550,8 +551,8 @@ class Evaluator extends React.Component<IProps, IState> {
           <HelpModalContent>
             <div className="content">
               <h1 className="modal-title">Evaluation Instructions</h1>
-              Use the following examples as guidelines when deciding whether a
-              recitation is recorded correctly or incorrectly.
+              Use the following examples as guidelines when deciding whether
+              a recitation is recorded correctly or incorrectly.
               <br /> <br />
               <h4>
                 Mark a recitation as{' '}
@@ -559,23 +560,23 @@ class Evaluator extends React.Component<IProps, IState> {
               </h4>
               <ul style={{ textAlign: 'left' }}>
                 <li>
-                  The reciter makes a mistake in how they pronounce a letter, or
-                  if he/she makes mistakes in harakaat (vowels).
+                  The reciter makes a mistake in how they pronounce a
+                  letter, or if he/she makes mistakes in harakaat (vowels).
                 </li>
                 <li> The reciter makes tajweed-related mistakes.</li>
                 <li>
-                  The reciter makes a major mistake, but then corrects himself
-                  or herself.
+                  The reciter makes a major mistake, but then corrects
+                  himself or herself.
                 </li>
                 <li>
-                  The recitation includes noise or an out-of-place word before
-                  or after the verse.
+                  The recitation includes noise or an out-of-place word
+                  before or after the verse.
                 </li>
                 <li> The reciter recites very slowly or very quickly.</li>
                 <li>
-                  The reciter omits <strong>up to a single word</strong> at the
-                  beginning or end of a verse. If he/she misses more than that,
-                  it should be marked as incorrect.
+                  The reciter omits <strong>up to a single word</strong> at
+                  the beginning or end of a verse. If he/she misses more
+                  than that, it should be marked as incorrect.
                 </li>
               </ul>
               <br />
@@ -584,7 +585,10 @@ class Evaluator extends React.Component<IProps, IState> {
                 <span style={{ color: 'red' }}>incorrect</span> if:
               </h4>
               <ul style={{ textAlign: 'left' }}>
-                <li> The recording is empty or is only background noise.</li>
+                <li>
+                  {' '}
+                  The recording is empty or is only background noise.
+                </li>
                 <li> The wrong verse is recited.</li>
                 <li>
                   The verse is recited so softly that you cannot hear the
@@ -595,13 +599,14 @@ class Evaluator extends React.Component<IProps, IState> {
                   they include the correct verse.
                 </li>
                 <li>
-                  The reciter omits <strong>more than a single word</strong> at
-                  the beginning or end of a verse.
+                  The reciter omits <strong>more than a single word</strong>{' '}
+                  at the beginning or end of a verse.
                 </li>
               </ul>
               <br />
-              The evaluator works best on your <strong>desktop/laptop</strong>,
-              as not all audio files play on mobile.
+              The evaluator works best on your{' '}
+              <strong>desktop/laptop</strong>, as not all audio files play
+              on mobile.
               <br />
               <br />
             </div>
@@ -636,6 +641,7 @@ class Evaluator extends React.Component<IProps, IState> {
             </p>
           </ModalContent>
         </Modal>
+        <SocialLinksFooter />
       </Container>
     );
   }

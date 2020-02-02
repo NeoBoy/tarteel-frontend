@@ -9,6 +9,7 @@ import { submitDemographics } from '../../api';
 import CountryList from '../../components/CountryList';
 import FooterButton from '../../components/FooterButton';
 import Navbar from '../../components/Navbar';
+import SocialLinksFooter from '../../components/SocialLinksFooter';
 import NoteButton from '../../components/NoteButton';
 import RadioButton from '../../components/RadioButton';
 import T from '../../components/T';
@@ -239,6 +240,7 @@ class DemographicsPage extends React.Component<IProps, IState> {
             </NoteButton>
           </div>
         </div>
+        <SocialLinksFooter />
       </Container>
     );
   }

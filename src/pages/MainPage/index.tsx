@@ -6,6 +6,7 @@ import ReactGA from 'react-ga';
 import Ayah from '../../components/Ayah';
 import Footer from '../../components/Footer';
 import Navbar from '../../components/Navbar';
+import SocialLinksFooter from '../../components/SocialLinksFooter';
 import { IStatus } from '../../types/GlobalState';
 import KEYS from '../../locale/keys';
 import IAyahShape from '../../shapes/IAyahShape';
@@ -123,6 +124,7 @@ class Main extends React.Component<IProps, never> {
           />
           <Footer isAyahPage={this.props.isAyahPage} />
         </div>
+        <SocialLinksFooter />
       </Container>
     );
   }

@@ -8,6 +8,7 @@ import { InjectedIntl, injectIntl } from 'react-intl';
 
 import FooterButton from '../../components/FooterButton';
 import Navbar from '../../components/Navbar';
+import SocialLinksFooter from '../../components/SocialLinksFooter';
 import T from '../../components/T';
 import KEYS from '../../locale/keys';
 import { Container } from './styles';
@@ -162,6 +163,7 @@ class SubscribePage extends Component<IProps, never> {
             </a>
           </div>
         </div>
+        <SocialLinksFooter />
       </Container>
     );
   }

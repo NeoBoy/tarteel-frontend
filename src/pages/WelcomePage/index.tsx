@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 
 import FooterButton from '../../components/FooterButton';
 import Navbar from '../../components/Navbar';
+import SocialLinksFooter from '../../components/SocialLinksFooter';
 import T from '../../components/T';
 import KEYS from '../../locale/keys';
 import { IUser } from '../../types/GlobalState';
@@ -78,6 +79,7 @@ class WelcomePage extends Component<IProps, never> {
             </FooterButton>
           </footer>
         </div>
+        <SocialLinksFooter />
       </Container>
     );
   }

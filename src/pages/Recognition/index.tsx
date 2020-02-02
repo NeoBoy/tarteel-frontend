@@ -12,6 +12,7 @@ import io from 'socket.io-client';
 
 import RecordingButton from '../../components/RecordingButton';
 import Navbar from '../../components/Navbar';
+import SocialLinksFooter from '../../components/SocialLinksFooter';
 import { Container } from './styles';
 import { connect } from 'react-redux';
 import { setRecognitionResults } from '../../store/actions/recognition';
@@ -169,49 +170,48 @@ class Recognition extends React.Component<IProps, IState> {
       <Container>
         <Navbar />
         {/* main tag is used for accessibiltiy */}
-          <main className={'content'}>
-            <div>
-              <p className={'status'}>
-                <T id={KEYS.AYAH_RECOGNITION_RECOGNITION_MESSAGE} />
-              </p>
-            </div>
-            <div className="words">
-              <span className={'query'}>{this.state.query}</span>
-              &nbsp;
-              <span className="partial-query">
-                {this.state.partialQuery}
-              </span>
-            </div>
-            <RecordingButton
-              className={`mic ${classnames}`}
-              onClick={this.handleRecordingButton}
-            >
-              {this.state.isLoading ? (
-                <div className={'icon spin'}>
-                  <Icon icon={circleONotch} size={20} />
-                </div>
-              ) : !this.state.isRecording ? (
-                <Icon icon={micA} size={30} />
-              ) : (
-                <Icon icon={stop} size={30} />
-              )}
-            </RecordingButton>
-            <p className={'splittable'}>
-              <T id={KEYS.AYAH_RECOGNITION_IMPROVE_ACCURACY} />
-              &nbsp;
-              <br />
-              <Link to={'/contribute'}>
-                <T id={KEYS.AYAH_RECOGNITION_CONTRIBUTE} />
-              </Link>
+        <main className={'content'}>
+          <div>
+            <p className={'status'}>
+              <T id={KEYS.AYAH_RECOGNITION_RECOGNITION_MESSAGE} />
             </p>
-          </main>
-          {this.state.showErrorMessage ? (
-            <RecordingError
-              onClose={() => {
-                this.setState({ showErrorMessage: false });
-              }}
-            />
-          ) : null}
+          </div>
+          <div className="words">
+            <span className={'query'}>{this.state.query}</span>
+            &nbsp;
+            <span className="partial-query">{this.state.partialQuery}</span>
+          </div>
+          <RecordingButton
+            className={`mic ${classnames}`}
+            onClick={this.handleRecordingButton}
+          >
+            {this.state.isLoading ? (
+              <div className={'icon spin'}>
+                <Icon icon={circleONotch} size={20} />
+              </div>
+            ) : !this.state.isRecording ? (
+              <Icon icon={micA} size={30} />
+            ) : (
+              <Icon icon={stop} size={30} />
+            )}
+          </RecordingButton>
+          <p className={'splittable'}>
+            <T id={KEYS.AYAH_RECOGNITION_IMPROVE_ACCURACY} />
+            &nbsp;
+            <br />
+            <Link to={'/contribute'}>
+              <T id={KEYS.AYAH_RECOGNITION_CONTRIBUTE} />
+            </Link>
+          </p>
+        </main>
+        {this.state.showErrorMessage ? (
+          <RecordingError
+            onClose={() => {
+              this.setState({ showErrorMessage: false });
+            }}
+          />
+        ) : null}
+        <SocialLinksFooter />
       </Container>
     );
   }

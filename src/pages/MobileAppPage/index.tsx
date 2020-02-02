@@ -6,6 +6,7 @@ import { InjectedIntl, injectIntl } from 'react-intl';
 import config from '../../../config';
 import FooterButton from '../../components/FooterButton';
 import Navbar from '../../components/Navbar';
+import SocialLinksFooter from '../../components/SocialLinksFooter';
 import T from '../../components/T';
 import KEYS from '../../locale/keys';
 import { Container } from './styles';
@@ -31,7 +32,9 @@ class MobileAppPage extends Component<IProps, never> {
     return (
       <Container>
         <Helmet>
-          <title>{intl.formatMessage({ id: KEYS.MOBILE_PAGE_TITLE })}</title>
+          <title>
+            {intl.formatMessage({ id: KEYS.MOBILE_PAGE_TITLE })}
+          </title>
         </Helmet>
         <Navbar />
         <div className="content">
@@ -70,6 +73,7 @@ class MobileAppPage extends Component<IProps, never> {
             </FooterButton>
           </footer>
         </div>
+        <SocialLinksFooter />
       </Container>
     );
   }

@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 import KEYS from '../../locale/keys';
 import Navbar from '../../components/Navbar';
+import SocialLinksFooter from '../../components/SocialLinksFooter';
 import Image from '../../components/Image';
 import Headline from '../../components/Headline';
 
@@ -27,7 +28,9 @@ class Partners extends React.Component<IProps> {
     return (
       <Container>
         <Helmet>
-          <title>{intl.formatMessage({ id: KEYS.PARTNERS_PAGE_TITLE })}</title>
+          <title>
+            {intl.formatMessage({ id: KEYS.PARTNERS_PAGE_TITLE })}
+          </title>
         </Helmet>
         <Navbar />
         <div className="content">
@@ -87,6 +90,7 @@ class Partners extends React.Component<IProps> {
             </Row>
           </FlexGird>
         </div>
+        <SocialLinksFooter />
       </Container>
     );
   }

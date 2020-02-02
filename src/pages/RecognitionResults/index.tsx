@@ -5,6 +5,7 @@ import { androidAdd } from 'react-icons-kit/ionicons/androidAdd';
 import { injectIntl, InjectedIntl } from 'react-intl';
 
 import Navbar from '../../components/Navbar';
+import SocialLinksFooter from '../../components/SocialLinksFooter';
 import { connect } from 'react-redux';
 import ReduxState, { IRecognition } from '../../types/GlobalState';
 import { Link } from 'react-router-dom';
@@ -86,6 +87,7 @@ class RecognitionResults extends React.Component<IProps> {
             </p>
           </New>
         </div>
+        <SocialLinksFooter />
       </Container>
     );
   }

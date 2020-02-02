@@ -17,6 +17,7 @@ import config from '../../../config';
 import { fetchAboutData } from '../../api';
 import FooterButton from '../../components/FooterButton';
 import Navbar from '../../components/Navbar';
+import SocialLinksFooter from '../../components/SocialLinksFooter';
 import T from '../../components/T';
 import { commaFormatter } from '../../helpers/utils';
 import KEYS from '../../locale/keys';
@@ -226,6 +227,7 @@ class About extends Component<IProps, IState> {
             </footer>
           </CoreTextWrapper>
         </ContentWrapper>
+        <SocialLinksFooter />
       </Container>
     );
   }

@@ -8,6 +8,7 @@ import Helmet from 'react-helmet';
 import { Container, Body, Title } from './styles';
 import withAuth, { AuthType } from '../../hocs/withAuth';
 import Navbar from '../../components/Navbar';
+import SocialLinksFooter from '../../components/SocialLinksFooter';
 import surahs from '../../api/surahs';
 import Table from '../../components/Table';
 import {
@@ -15,6 +16,7 @@ import {
   setSessionProgress,
   ISessionData,
 } from '../../api/profile';
+import SocialLinksFooter from '../../components/SocialLinksFooter';
 
 interface IState {
   loading: boolean;
@@ -64,6 +66,7 @@ class Progres extends React.Component {
           <Title> Weekly Progress </Title>
           <Table header={header} data={this.formatData(data).reverse()} />
         </Body>
+        <SocialLinksFooter />
       </Container>
     );
   }

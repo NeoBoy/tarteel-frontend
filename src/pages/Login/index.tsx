@@ -5,6 +5,7 @@ import LoginForm from '../../components/LoginForm';
 import SignupForm from '../../components/SignupForm';
 
 import Navbar from '../../components/Navbar';
+import SocialLinksFooter from '../../components/SocialLinksFooter';
 
 interface IProps {}
 
@@ -34,6 +35,7 @@ class Login extends React.Component<IProps, IState> {
             <SignupForm handleToggle={this.handleToggle} />
           )}
         </div>
+        <SocialLinksFooter />
       </Container>
     );
   }

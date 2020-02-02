@@ -12,6 +12,7 @@ import { Container, Boxed } from './styles';
 import { getCookie } from '../../helpers/cookie';
 import ShareModal from '../../components/ShareModal';
 import Navbar from '../../components/Navbar';
+import SocialLinksFooter from '../../components/SocialLinksFooter';
 import T from '../../components/T';
 import Headline from '../../components/Headline';
 import Demographics from '../../components/Demographics';
@@ -119,7 +120,10 @@ class ProfilePage extends Component<IProps, IState> {
         </Helmet>
         <Navbar />
         <div className="content">
-          <a className="share-profile-link" onClick={this.handleShareProfile}>
+          <a
+            className="share-profile-link"
+            onClick={this.handleShareProfile}
+          >
             <T id={KEYS.PROFILE_SHARE_MESSAGE} />
           </a>
           <Boxed>
@@ -303,6 +307,7 @@ class ProfilePage extends Component<IProps, IState> {
             this.setState({ showShareModal: false });
           }}
         />
+        <SocialLinksFooter />
       </Container>
     );
   }

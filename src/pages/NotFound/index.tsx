@@ -9,6 +9,7 @@ import T from '../../components/T';
 import KEYS from '../../locale/keys';
 import styled from 'styled-components';
 import Navbar from '../../components/Navbar';
+import SocialLinksFooter from '../../components/SocialLinksFooter';
 
 interface IProps {
   intl: InjectedIntl;
@@ -36,6 +37,7 @@ class NotFound extends React.Component<IProps> {
             </b>
           </Link>
         </div>
+        <SocialLinksFooter />
       </Container>
     );
   }
