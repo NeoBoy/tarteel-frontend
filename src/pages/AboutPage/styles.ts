@@ -36,6 +36,7 @@ export const ContentWrapper = styled.div`
   a {
     color: ${props => props.theme.colors.linkColor}
     text-decoration: underline;
+    font-weight: 600;
   }
 
 	ul {
