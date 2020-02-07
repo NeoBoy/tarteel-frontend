@@ -1,5 +1,5 @@
 name: deploy website
-on: [pull_request]
+on: [check_run, pull_request]
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -9,5 +9,5 @@ jobs:
         with:
           zeit-token: ${{ secrets.ZEIT_TOKEN }} # Required
           github-token: ${{ secrets.GHUB_TOKEN }} #Optional 
-          now-args: 'DEPLOYMENT=staging' #Optional 
+#          now-args: 'DEPLOYMENT=staging' #Optional 
           github-comment: true
