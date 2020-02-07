@@ -9,5 +9,5 @@ jobs:
         with:
           zeit-token: ${{ secrets.ZEIT_TOKEN }} # Required
           github-token: ${{ secrets.GHUB_TOKEN }} #Optional 
-          now-args: '' #Optional 
+          now-args: '--env DEPLOYMENT=staging' #Optional 
           github-comment: true
