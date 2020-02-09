@@ -1,0 +1,15 @@
+name: deploy and alias to staging
+on: pull_request:
+    types: [closed] 
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+    steps:
+      - uses: actions/checkout@v1
+      - uses: amondnet/now-deployment@v1
+        with:
+          zeit-token: ${{ secrets.ZEIT_TOKEN }} # Required
+          github-token: ${{ secrets.GHUB_TOKEN }} #Optional 
+          now-args: '--env DEPLOYMENT=staging' #Optional 
+          github-comment: true
