@@ -16,5 +16,5 @@ export const fetchIqraRecogniton = (req: IRecognitionRequest) => {
       arabicText,
       translation,
     }),
-  }).then(res => res.json);
+  }).then(res => res.json());
 };

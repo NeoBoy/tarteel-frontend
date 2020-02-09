@@ -2,15 +2,10 @@ const isGitHubDeploy = process.env.NOW_GITHUB_DEPLOYMENT == 1;
 
 const env = {
   development: {
-    // Uncomment the following to use our backend services locally
-    // TARTEEL_API_KEY: 'be5f3eaa01c226b0faa570e5a92ddca33ab51052',
-    // RECOGNITION_SERVER_URL: 'http://localhost:5000',
-    // TRANSCRIBE_SERVER_URL: 'http://localhost:5000',
-    // API_URL: 'http://localhost:8000',
-    TARTEEL_API_KEY: process.env.STAGING_TARTEEL_API_KEY,
-    RECOGNITION_SERVER_URL: process.env.STAGING_RECOGNITION_SERVER_URL,
-    TRANSCRIBE_SERVER_URL: process.env.STAGING_TRANSCRIBE_SERVER_URL,
-    API_URL: process.env.STAGING_API_URL,
+    TARTEEL_API_KEY: '9a3b6bfbafe8ee319c5275fb921be92317c14046',
+    RECOGNITION_SERVER_URL: 'http://localhost:5000',
+    TRANSCRIBE_SERVER_URL: 'http://localhost:5000',
+    API_URL: 'https://api-dev.tarteel.io',
   },
   staging: {
     TARTEEL_API_KEY: process.env.STAGING_TARTEEL_API_KEY,

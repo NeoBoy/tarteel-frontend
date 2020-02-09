@@ -138,7 +138,6 @@ class Transcribe extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     const isTranslationMode = false;
-    // queryString.parseUrl(window.location.href).query.mode === 'translation';
 
     this.state = {
       isRecording: false,
@@ -221,6 +220,15 @@ class Transcribe extends React.Component<IProps, IState> {
     this.setState({
       isRecording: false,
     });
+
+    //display results for patial query.
+    if (
+      this.state.partialQuery &&
+      this.state.partialQuery != '' &&
+      !this.state.ayahFound
+    ) {
+      this.props.history.push('/recognition/' + this.state.partialQuery);
+    }
   };
 
   handleSumbitRectitedAyah = async (surah: number, ayah: number) => {

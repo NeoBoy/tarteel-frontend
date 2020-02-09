@@ -297,6 +297,9 @@ const EN: IShape = {
       "No speech was detected. You may need to adjust your <a target='_blank' href={errorLink}> microphone settings</a>.",
     [KEYS.AYAH_RECOGNITION_RESULTS]: 'Results',
     [KEYS.AYAH_RECOGNITION_NEW_SEARCH]: 'New Search',
+    [KEYS.TRANSCRIBE_SEARCH_NOTE]: 'We haven\'t been able to match your recitation. Recite for a longer period in your next recording to get features such as follow-along, memorization mode, and others. You can find the details on this',
+    [KEYS.VIDEO]: 'video',
+    [KEYS.SEARCHING]: 'searching...',
 
     // PROFILE PAGE
     [KEYS.PROFILE_TITLE]: 'My Profile | Tarteel',

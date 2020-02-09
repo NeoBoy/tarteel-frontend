@@ -107,6 +107,14 @@ export default [
     exact: true,
   },
   {
+    path: '/recognition/:query',
+    component: asyncComponent({
+      resolve: () =>
+        import(/* webpackChunkName: "Recognition" */ './pages/SearchResults'),
+    }),
+    exact: true,
+  },
+  {
     path: '/recognition/results',
     component: asyncComponent({
       resolve: () =>

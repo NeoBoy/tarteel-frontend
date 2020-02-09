@@ -187,6 +187,9 @@ export default {
       'لم يتم التعرف علي أي صوت .  يمكن أن تتأكد من إعدادات الميكروفون  <a target=‘_blank’ href={errorLink}> من هنا</a>.',
     [KEYS.AYAH_RECOGNITION_RESULTS]: 'نتيجه',
     [KEYS.AYAH_RECOGNITION_NEW_SEARCH]: 'بحث جديد',
+    [KEYS.VIDEO]: 'فيديو',
+    [KEYS.SEARCHING]: '...جاري البحث',
+    [KEYS.TRANSCRIBE_SEARCH_NOTE]: 'لم نتمكن من مطابقة تلاوتك. إقرأ لفترة أطول في التسجيل التالي للحصول على ميزات مثل المتابعة القراءة وغيرها. يمكنك العثور على تفاصيل عمل البرنامج في هذا',
 
     // EVALUATE AYAHS
     [KEYS.EVALUATE_AYAHS_PAGE_TITLE]: 'ساهم بتقويم الأيات | ترتيل',

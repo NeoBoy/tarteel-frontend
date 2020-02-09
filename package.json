@@ -201,6 +201,7 @@
     "react-debounce-input": "3.2.0",
     "react-device-detect": "1.6.1",
     "react-dom": "16.4.2",
+    "react-feather": "2.0.3",
     "react-flags": "^0.1.17",
     "react-flags-select": "^1.1.10",
     "react-full-screen": "0.2.4",
