@@ -29,7 +29,7 @@ export const videoModalStyles = {
     height: 'auto',
     overflow: 'hidden',
     maxHeight: 476,
-    maxWidth: 824
+    maxWidth: 824,
   },
 };
 
@@ -68,17 +68,16 @@ export const ToggleButtonWrapper = styled.div`
 export const TranslationWrapper = styled.div`
   display: flex;
   flex-flow: column;
-  max-width: 750px;
   justify-content: space-between;
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: 200px;
   color: grey;
-  font-size: 20px;
+  font-size: 40px;
 `;
 
 export const TranslationModeWrapper = styled.div`
   display: flex;
-  direction: rtl;
+  direction: ltr;
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
@@ -103,7 +102,7 @@ export const Container = styled.div<IContainer>`
     color: inherit;
     text-decoration: underline;
 
-   &:hover{
+    &:hover {
       cursor: pointer;
     }
   }
@@ -139,15 +138,9 @@ export const Container = styled.div<IContainer>`
       }
 
       .surah-wrapper {
-        font-size: calc(1vmin + ${props => Math.abs(props.width) * 0.05}px);
-        @media screen and (min-width: ${props =>
-            props.theme.breakpoints.md}px) {
-          font-size: calc(1vmin + ${props => Math.abs(props.width) * 0.02}px);
-        }
-        @media screen and (min-width: ${props =>
-            props.theme.breakpoints.lg}px) {
-          font-size: calc(2vmin + ${props => Math.abs(props.width) * 0.01}px);
-        }
+        font-size: 70px;
+        max-width: 95%;
+        word-break: break-all;
       }
     }
 
@@ -284,6 +277,7 @@ export const Container = styled.div<IContainer>`
   .ayah-display {
     max-width: 1300px;
     font-size: 36px;
+    border: 1px red solid;
     min-height: 30%;
     display: flex;
     align-items: center;

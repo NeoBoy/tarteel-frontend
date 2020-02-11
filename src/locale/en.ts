@@ -390,7 +390,7 @@ const EN: IShape = {
   [KEYS.CLICK_DEMO_VIDEO_URL_MESSAGE]: 'watch the demo video',
   [KEYS.BETA_MESSAGE]: 'Tarteel is in beta. Join the',
   [KEYS.BETA_GROUP_URL_MESSAGE]: 'beta users group',
-  [KEYS.KEEP_RECITING_MESSAGE]: 'Keep reciting...',
+  [KEYS.KEEP_RECITING_MESSAGE]: 'Finding a match. Keep reciting...',
   },
 };
 

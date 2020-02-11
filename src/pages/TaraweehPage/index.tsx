@@ -137,7 +137,7 @@ class Taraweeh extends React.Component<IProps, IState> {
 
   constructor(props: IProps) {
     super(props);
-    const isTranslationMode = false;
+    const isTranslationMode = true;
 
     this.state = {
       isRecording: false,
@@ -220,15 +220,6 @@ class Taraweeh extends React.Component<IProps, IState> {
     this.setState({
       isRecording: false,
     });
-
-    //display results for patial query.
-    if (
-      this.state.partialQuery &&
-      this.state.partialQuery != '' &&
-      !this.state.ayahFound
-    ) {
-      this.props.history.push('/recognition/' + this.state.partialQuery);
-    }
   };
 
   handleSumbitRectitedAyah = async (surah: number, ayah: number) => {
@@ -532,7 +523,20 @@ class Taraweeh extends React.Component<IProps, IState> {
 
   renderHeaderContent = () => {
     const { ayahFound, currentAyah } = this.state;
-
+    const iconsContainer = (
+      <div className="icons-container">
+        <Tippy content="Fullscreen" trigger="mouseenter">
+          <Icon
+            className="icon fullscreen-icon"
+            icon={this.state.fullScreen ? exit : enter}
+            onClick={this.toggleFullscreen}
+          />
+        </Tippy>
+        <Tippy content="Refresh" trigger="mouseenter">
+          <Icon className="icon" icon={refresh} onClick={this.resetState} />
+        </Tippy>
+      </div>
+    );
     return (
       <div className="header-container">
         {/* Display surah and Ayah number & inline controls once a match is found */}
@@ -546,24 +550,11 @@ class Taraweeh extends React.Component<IProps, IState> {
                 <T id={KEYS.AYAH_WORD} /> {currentAyah.verseNumber}
               </span>
             </div>
-            <div className="icons-container">
-              <Tippy content="Fullscreen" trigger="mouseenter">
-                <Icon
-                  className="icon fullscreen-icon"
-                  icon={this.state.fullScreen ? exit : enter}
-                  onClick={this.toggleFullscreen}
-                />
-              </Tippy>
-              <Tippy content="Refresh" trigger="mouseenter">
-                <Icon
-                  className="icon"
-                  icon={refresh}
-                  onClick={this.resetState}
-                />
-              </Tippy>
-            </div>
+            {iconsContainer}
           </React.Fragment>
-        ) : null}
+        ) : (
+          <React.Fragment>{iconsContainer}</React.Fragment>
+        )}
       </div>
     );
   };
@@ -600,16 +591,6 @@ class Taraweeh extends React.Component<IProps, IState> {
             )}
           </div>
         </ControlsWrapper>
-        <div className="footer-text">
-          <T id={KEYS.BETA_MESSAGE} />{' '}
-          <a
-            target="_window"
-            href="https://www.facebook.com/groups/232553337303098/"
-          >
-            <T id={KEYS.BETA_GROUP_URL_MESSAGE} />
-          </a>
-          .
-        </div>
       </FooterWrapper>
     );
   };
@@ -646,7 +627,7 @@ class Taraweeh extends React.Component<IProps, IState> {
               <div className="ayah-info"> Listening... </div>
             ) : (
                 <div className="ayah-info">
-                  <T id={KEYS.WAITING_FOR_INPUT} />
+                  Click on the Mic below to start recording
                 </div>
               )}
             {/* render partial query until ayah found  */}
@@ -726,10 +707,7 @@ class Taraweeh extends React.Component<IProps, IState> {
             />
           </Modal>
           <div className="intro-message">
-            <T id={KEYS.INTRO_MESSAGE} />{' '}
-            <a onClick={this.openVideoModal} className="demo-video-link">
-              <T id={KEYS.CLICK_DEMO_VIDEO_URL_MESSAGE} />
-            </a>
+            Welcome to the Tarteel Taraweeh project
           </div>
         </React.Fragment>
       );
@@ -744,7 +722,6 @@ class Taraweeh extends React.Component<IProps, IState> {
   render() {
     return (
       <Container width={this.state.dimensions.width}>
-        <Navbar />
         <Fullscreen
           enabled={this.state.fullScreen}
           onChange={fullScreen => this.setState({ fullScreen })}
@@ -765,7 +742,6 @@ class Taraweeh extends React.Component<IProps, IState> {
             {this.renderAyahsContent()}
             {this.renderFooter()}
           </main>
-          <SocialLinksFooter />
         </Fullscreen>
       </Container>
     );
@@ -795,6 +771,6 @@ export default injectIntl(
     connect(
       mapStateToProps,
       mapDispatchToProps
-    )(Transcribe)
+    )(Taraweeh)
   )
 );
