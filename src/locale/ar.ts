@@ -189,7 +189,8 @@ export default {
     [KEYS.AYAH_RECOGNITION_NEW_SEARCH]: 'بحث جديد',
     [KEYS.VIDEO]: 'فيديو',
     [KEYS.SEARCHING]: '...جاري البحث',
-    [KEYS.TRANSCRIBE_SEARCH_NOTE]: 'لم نتمكن من مطابقة تلاوتك. إقرأ لفترة أطول في التسجيل التالي للحصول على ميزات مثل المتابعة القراءة وغيرها. يمكنك العثور على تفاصيل عمل البرنامج في هذا',
+    [KEYS.TRANSCRIBE_SEARCH_NOTE]:
+      'لم نتمكن من مطابقة تلاوتك. إقرأ لفترة أطول في التسجيل التالي للحصول على ميزات مثل المتابعة القراءة وغيرها. يمكنك العثور على تفاصيل عمل البرنامج في هذا',
 
     // EVALUATE AYAHS
     [KEYS.EVALUATE_AYAHS_PAGE_TITLE]: 'ساهم بتقويم الأيات | ترتيل',
@@ -240,16 +241,24 @@ export default {
     [KEYS.CONTRIBUTOR_NAME_10]: 'مروة عبد الحي',
     [KEYS.CONTRIBUTOR_POSITION_10]:
       'طالبة علوم الحاسوب في معهد ماساتشوستس للتكنولوجيا',
-    [KEYS.CONTRIBUTOR_NAME_11]: 'محمود اشرف',
-    [KEYS.CONTRIBUTOR_POSITION_11]: 'مهندس برمجيات في ترتيل',
+    [KEYS.CONTRIBUTOR_NAME_11]: 'أحمد العبد',
+    [KEYS.CONTRIBUTOR_POSITION_11]: 'مسوق في ترتيل',
     [KEYS.CONTRIBUTOR_NAME_12]: 'محمد موسى',
     [KEYS.CONTRIBUTOR_POSITION_12]: 'مهندس برمجيات في فيسبوك',
-    [KEYS.CONTRIBUTOR_NAME_13]: 'مؤمن سليمان',
-    [KEYS.CONTRIBUTOR_POSITION_13]: 'مهندس برمجيات في سايبر تالنتس',
+    [KEYS.CONTRIBUTOR_NAME_13]: 'أحمد حسين',
+    [KEYS.CONTRIBUTOR_POSITION_13]: 'مهندس في ترتيل',
     [KEYS.CONTRIBUTOR_NAME_14]: 'عمرو الفاس',
     [KEYS.CONTRIBUTOR_POSITION_14]: 'عضو مجلس إدارة الجمعية الإسلامية في بوسطن',
     [KEYS.CONTRIBUTOR_NAME_15]: 'بسيوني نحلة',
     [KEYS.CONTRIBUTOR_POSITION_15]: 'رئيس مدرسة بوسطن الإسلامية',
+    [KEYS.CONTRIBUTOR_NAME_ZESHAN]: 'زيشان جندل',
+    [KEYS.CONTRIBUTOR_POSITION_ZESHAN]: 'مستشار في جامعة يل ',
+
+    [KEYS.CONTRIBUTOR_NAME_AQEEL]: 'عقيل محمد',
+    [KEYS.CONTRIBUTOR_POSITION_AQEEL]: 'رئيس مدرسة بوسطن الإسلامية',
+
+    [KEYS.CONTRIBUTOR_NAME_ABDULLAH]: 'عبدالله بدير',
+    [KEYS.CONTRIBUTOR_POSITION_ABDULLAH]: 'مستشار في باين',
 
     // Transcriber
     [KEYS.WAITING_FOR_INPUT]: '"حاول ان تقول "قل هو الله احد',
