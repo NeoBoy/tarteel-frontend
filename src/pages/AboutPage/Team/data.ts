@@ -34,7 +34,7 @@ const teamData: ITeam[] = [
     nameKey: KEYS.CONTRIBUTOR_NAME_11,
     positionKey: KEYS.CONTRIBUTOR_POSITION_11,
     facebookURL: '',
-    linkedinURL: 'https://www.linkedin.com/in/ahmed-el-abd-🇪🇬-1045a610',
+    linkedinURL: 'https://www.linkedin.com/in/ahmed-el-abd-1045a610/',
     imageSrc: require('../../../../public/images/team/Ahmed Elabd.jpg'),
   },
   {
