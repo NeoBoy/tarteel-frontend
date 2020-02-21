@@ -61,7 +61,7 @@ class ContactUs extends React.Component<IProps, IState> {
     subject: subjects[0],
     email: '',
     message: '',
-    receivers: ['info@tarteel.io', 'contact.tarteel@gmail.com', 'tarteel@abdellatif.io'],
+    receivers: ['info@tarteel.io'],
     isLoading: false,
   };
 
@@ -103,7 +103,6 @@ class ContactUs extends React.Component<IProps, IState> {
   handleSubmit = () => {
     const body = pick(this.state, 'subject', 'email', 'message', 'receivers');
     const errors = this.validateForm(body);
-
     if (!errors) {
       this.setState({ isLoading: true });
       return sendEmail(body)
