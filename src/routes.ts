@@ -170,4 +170,11 @@ export default [
         import(/* webpackChunkName: "Transcribe" */ './pages/Progress'),
     }),
   },
+  {
+    path: '/taraweeh',
+    component: asyncComponent({
+      resolve: () =>
+        import(/* webpackChunkName: "Taraweh" */ './pages/TaraweehPage'),
+    }),
+  }
 ];
