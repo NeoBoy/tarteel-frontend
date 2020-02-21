@@ -242,7 +242,7 @@ export default {
     [KEYS.CONTRIBUTOR_POSITION_10]:
       'طالبة علوم الحاسوب في معهد ماساتشوستس للتكنولوجيا',
     [KEYS.CONTRIBUTOR_NAME_11]: 'أحمد العبد',
-    [KEYS.CONTRIBUTOR_POSITION_11]: 'مسوق في ترتيل',
+    [KEYS.CONTRIBUTOR_POSITION_11]: 'مسوق في مندي فرما',
     [KEYS.CONTRIBUTOR_NAME_12]: 'محمد موسى',
     [KEYS.CONTRIBUTOR_POSITION_12]: 'مهندس برمجيات في فيسبوك',
     [KEYS.CONTRIBUTOR_NAME_13]: 'أحمد حسين',

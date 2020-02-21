@@ -370,7 +370,7 @@ const EN: IShape = {
     [KEYS.CONTRIBUTOR_NAME_10]: 'Marwa Abdulhai',
     [KEYS.CONTRIBUTOR_POSITION_10]: 'CS student at MIT',
     [KEYS.CONTRIBUTOR_NAME_11]: 'Ahmed Elabd',
-    [KEYS.CONTRIBUTOR_POSITION_11]: 'Marketing at Tarteel',
+    [KEYS.CONTRIBUTOR_POSITION_11]: 'Marketing at Mundipharma',
     [KEYS.CONTRIBUTOR_NAME_12]: 'Mohamed Moussa',
     [KEYS.CONTRIBUTOR_POSITION_12]: 'Engineer at Facebook',
     [KEYS.CONTRIBUTOR_NAME_13]: 'Ahmed Hussein',
@@ -384,7 +384,7 @@ const EN: IShape = {
     [KEYS.CONTRIBUTOR_NAME_ABDULLAH]: 'Abdullah Budeir',
     [KEYS.CONTRIBUTOR_POSITION_ABDULLAH]: 'Associate at Bain & Co.',
     [KEYS.CONTRIBUTOR_NAME_AQEEL]: 'Aqeel Mohammad',
-    [KEYS.CONTRIBUTOR_POSITION_AQEEL]: 'Director at Empire Studios',
+    [KEYS.CONTRIBUTOR_POSITION_AQEEL]: 'Principal at EMPIRE',
 
     // TRANSCRIBE
     [KEYS.TRANSCRIBE]: 'Transcribe',

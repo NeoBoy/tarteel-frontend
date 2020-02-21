@@ -118,9 +118,7 @@ export const sendEmail = async (body: any) => {
     {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        // TODO(piraka9011)
-        // Authorization: `Token ${token}`,
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(body),
     }
