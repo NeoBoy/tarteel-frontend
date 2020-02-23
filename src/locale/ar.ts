@@ -221,6 +221,7 @@ export default {
     [KEYS.CONTACT_US_PAGE_TITLE]: 'تواصل معنا| ترتيل',
     [KEYS.CONTACT_US_SEND]: 'إرسال',
     [KEYS.CONTACT_US_BUTTON_TEXT]: 'تواصل معنا',
+    [KEYS.CONTACT_US_EMAIL_TEXT]: ' <a href="mailto:info@tarteel.io">info@tarteel.io</a> يمكنكم التواصل معنا عن طريق بريدنا',
 
     // DONATE PAGE
     [KEYS.DONATE_PAGE_TITLE]: 'التبرع النقدي | ترتيل',

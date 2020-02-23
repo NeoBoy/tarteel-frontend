@@ -232,6 +232,7 @@ const EN: IShape = {
     [KEYS.CONTACT_US_SEND]: 'Send',
     [KEYS.CONTACT_US_BUTTON_TEXT]: 'contact us',
     [KEYS.CONTACT_US_SUBJECT]: 'Subject',
+    [KEYS.CONTACT_US_EMAIL_TEXT]: 'You can contact us by emailing <a href="mailto:info@tarteel.io">info@tarteel.io</a> or by using the form below.',
 
     // LOGIN FORM
     [KEYS.LOGOUT_BUTTON]: 'Logout',

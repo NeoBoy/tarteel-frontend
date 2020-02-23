@@ -105,6 +105,7 @@ class ContactUs extends React.Component<IProps, IState> {
     const errors = this.validateForm(body);
     if (!errors) {
       this.setState({ isLoading: true });
+      body.subject = body.subject.value;
       return sendEmail(body)
         .then(res => res.json())
         .then(json => {
@@ -137,6 +138,9 @@ class ContactUs extends React.Component<IProps, IState> {
         </Helmet>
         <Navbar />
         <div className="content">
+          <div className="contact-us-email">
+            <T id={KEYS.CONTACT_US_EMAIL_TEXT} />
+          </div>
           <div className="form">
             <div className="select-container">
               <label>
@@ -222,6 +226,15 @@ const Container = styled.div`
       .select {
         width: 320px;
         margin-bottom: 15px;
+      }
+    }
+    
+    .contact-us-email {
+      text-align: center;
+      margin-bottom: 50px;
+      a {
+        color: #5ec49e;
+        text-decoration: underline;
       }
     }
   }
