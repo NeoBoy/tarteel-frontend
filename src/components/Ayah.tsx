@@ -94,23 +94,32 @@ class Ayah extends React.Component<IProps, IState> {
     return (
       <Container>
         <div className="ayah-text">
-          {isFetchingAyah || !ayah.textSimple
-            ? this.renderAyahLoader()
-            : this.renderAyah()}
+          <div>
+            {isFetchingAyah || !ayah.textSimple
+              ? this.renderAyahLoader()
+              : this.renderAyah()}
+          </div>
+          {this.props.isAyahPage && (
+            <div className="ayah-translit">
+              {this.props.ayah.translations[0].text}
+            </div>
+          )}
         </div>
         <div className="ayah-data">
-          <div className="ayah-translit">
-            <p className="translit-button" onClick={this.toggleTranslit}>
+          {!this.props.isAyahPage && (
+            <div className="ayah-translit">
+              <p className="translit-button" onClick={this.toggleTranslit}>
+                {this.state.showTranslit ? (
+                  <T id={KEYS.AYAH_HIDE_TRANSLITERATION} />
+                ) : (
+                  <T id={KEYS.AYAH_SHOW_TRANSLITERATION} />
+                )}
+              </p>
               {this.state.showTranslit ? (
-                <T id={KEYS.AYAH_HIDE_TRANSLITERATION} />
-              ) : (
-                <T id={KEYS.AYAH_SHOW_TRANSLITERATION} />
-              )}
-            </p>
-            {this.state.showTranslit ? (
-              <p className="translit">{this.renderTransliteration()}</p>
-            ) : null}
-          </div>
+                <p className="translit">{this.renderTransliteration()}</p>
+              ) : null}
+            </div>
+          )}
           <div className={'ayah-loc-container'}>
             <div className="ayah-loc">
               ({ayah.chapterId} : {ayah.verseNumber})
@@ -126,9 +135,9 @@ class Ayah extends React.Component<IProps, IState> {
         <ShareModal
           show={this.state.showShareModal}
           quote={``}
-          url={`https://tarteel.io/ayah/${ayah.chapterId}/${ayah.verseNumber}${
-            locale === 'ar' ? '/?lang=ar' : ''
-          }`}
+          url={`https://tarteel.io/ayah/${ayah.chapterId}/${
+            ayah.verseNumber
+          }${locale === 'ar' ? '/?lang=ar' : ''}`}
           handleCloseModal={() => {
             this.setState({ showShareModal: false });
           }}
@@ -140,7 +149,6 @@ class Ayah extends React.Component<IProps, IState> {
 
 const Container = styled.div`
   text-align: center;
-  padding: 10px;
   box-sizing: border-box;
   z-index: 5;
   position: relative;
@@ -156,9 +164,8 @@ const Container = styled.div`
     //margin-top: 20px;
     direction: rtl !important;
     font-family: 'UthmanicHafs';
-    font-size: 5.5vmin;
+    font-size: 50px;
     color: black;
-    min-height: 180px;
 
     .word {
       display: inline-block;
@@ -176,7 +183,11 @@ const Container = styled.div`
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+    margin-top: 70px;
+    direction: ltr;
 
+    font-size: 18px;
+    color: grey;
     .translit-button {
       cursor: pointer;
       color: ${props => props.theme.colors.textColor};

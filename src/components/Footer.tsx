@@ -404,7 +404,6 @@ const Container = styled.div`
   &.get-started {
     box-sizing: border-box;
     padding: 1em 0;
-    top: 2em;
     position: relative;
   }
 
