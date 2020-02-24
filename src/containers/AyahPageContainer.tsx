@@ -5,7 +5,7 @@ import { Dispatch } from 'redux';
 import { ActionType } from 'typesafe-actions';
 
 import { fetchSpecificAyah } from '../api/ayahs';
-import Main from '../pages/MainPage';
+import AyahPage from '../pages/MainPage/ayahPage';
 import IAyahShape from '../shapes/IAyahShape';
 import {
   loadNextAyah,
@@ -71,7 +71,7 @@ export const AyahPageContainer = {
     connect(
       mapStateToProps,
       mapDispatchToProps,
-    )(props => <Main isAyahPage={true} {...props} />)
+    )(props => <AyahPage isAyahPage={true} {...props} />)
   ),
   loadData: (store: any, req: any, res: any) => {
     const params = req.params[0]

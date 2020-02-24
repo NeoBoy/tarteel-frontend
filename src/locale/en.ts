@@ -51,7 +51,7 @@ const EN: IShape = {
     [KEYS.MOBILE_APP_LINK_TEXT]: 'Mobile App',
     [KEYS.EVALUATE_AYAHS]: 'Evaluate Ayahs',
     [KEYS.EVALUATE_AYAHS_PAGE_TITLE]: 'Evaluate Ayahs | Tarteel',
-    [KEYS.GET_STARTED]: 'Recite again',
+    [KEYS.GET_STARTED]: 'Get started',
     [KEYS.PARTNERS_LINK_TEXT]: 'Partners',
     [KEYS.PREVIOUS_WORD]: 'Prev',
     [KEYS.DONATE_LINK_TEXT]: 'Donate',
