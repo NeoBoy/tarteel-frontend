@@ -44,6 +44,7 @@ export default {
     [KEYS.PARTNERS_LINK_TEXT]: 'الشركاء',
     [KEYS.PREVIOUS_WORD]: 'السابقه',
     [KEYS.DONATE_LINK_TEXT]: 'التبرع النقدي',
+    [KEYS.MOBILE_DOWNLOAD_MESSAGE]: 'حمل برنامج ترتيل الآن لكي تستخدم جميع الخاصيات على الأندرويد والأيفون',
 
     // AYAH PICKER
     [KEYS.AYAH_PICKER_TITLE]: 'اختر آية',

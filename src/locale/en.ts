@@ -55,6 +55,7 @@ const EN: IShape = {
     [KEYS.PARTNERS_LINK_TEXT]: 'Partners',
     [KEYS.PREVIOUS_WORD]: 'Prev',
     [KEYS.DONATE_LINK_TEXT]: 'Donate',
+    [KEYS.MOBILE_DOWNLOAD_MESSAGE]: 'Download the Tarteel mobile app to use all our features on the go on Android and iOS',
 
     // AYAH PICKER
     [KEYS.AYAH_PICKER_TITLE]: 'Pick an Ayah',
@@ -392,7 +393,7 @@ const EN: IShape = {
     [KEYS.FOLLOW_ALONG_MODE]: 'Enable follow along mode (Beta)',
     [KEYS.WAITING_FOR_INPUT]: 'Try saying قل هو الله احد',
     [KEYS.READING_MODE]: 'Reading mode',
-    [KEYS.MEMORIZATION_MODE]: 'Memorization mode',
+    [KEYS.MEMORIZATION_MODE]: 'Hide ayahs',
     [KEYS.INTRO_MESSAGE]:
       "Tarteel uses AI to provide live feedback on your Qu'ran recitation. Try it out! Or",
     [KEYS.CLICK_DEMO_VIDEO_URL_MESSAGE]: 'watch the demo video',

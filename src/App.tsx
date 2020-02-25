@@ -8,12 +8,9 @@ import styled, { createGlobalStyle } from 'styled-components';
 import { withCookies } from 'react-cookie';
 
 import AppHelmet from './components/AppHelmet';
-import config from '../config';
-import CookiesBanner from './components/CookiesBanner';
-import LanguagePicker from './components/LanguagePicker';
+import MobileAppPrompt from './components/MobileAppPrompt';
 import Routes from './components/Routes';
 import { setLocation } from './store/actions/router';
-import { getLocalStorage } from './helpers/get';
 import { getCurrentUser } from './store/actions/auth';
 
 import './styles/index.scss';
@@ -84,7 +81,7 @@ class App extends React.Component<IProps, IState> {
         <GlobalStyle path={this.props.location.pathname} />
         <AppHelmet path={this.props.location.pathname} />
         <Routes />
-        {/*<CookiesBanner />*/}
+        <MobileAppPrompt />
       </Container>
     );
   }
