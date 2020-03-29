@@ -4,6 +4,7 @@ import { injectIntl } from 'react-intl';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { withRouter } from 'react-router';
+import * as Sentry from '@sentry/browser';
 import styled, { createGlobalStyle } from 'styled-components';
 import { withCookies } from 'react-cookie';
 
@@ -14,12 +15,7 @@ import { setLocation } from './store/actions/router';
 import { getCurrentUser } from './store/actions/auth';
 
 import './styles/index.scss';
-
-// import Amplify from 'aws-amplify';
-// import AWSConfig from './aws-exports';
 import logScreen from './helpers/logScreen';
-
-// Amplify.configure(AWSConfig);
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -43,6 +39,8 @@ interface IState {
 }
 
 type IProps = IOwnProps & IDispatchProps;
+
+Sentry.init({dsn: "https://27ec45db857d4436a63fda1d633f13db@sentry.io/1796030"});
 
 class App extends React.Component<IProps, IState> {
   state = {
