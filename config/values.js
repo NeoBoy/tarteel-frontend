@@ -13,7 +13,7 @@ const locales = {
   ar: 'العربية',
 };
 
-const CDN_URL = 'https://d2sf46268wowyo.cloudfront.net';
+const CDN_URL = 'https://d1cyoiovebchfv.cloudfront.net';
 
 // All these configurations would only be readable on only the server bundle,
 // if you want to have it in the client bundle you should add a filter with it's name

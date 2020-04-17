@@ -9,14 +9,14 @@ const env = {
   },
   staging: {
     TARTEEL_API_KEY: process.env.STAGING_TARTEEL_API_KEY,
-    RECOGNITION_SERVER_URL: process.env.STAGING_RECOGNITION_SERVER_URL,
-    TRANSCRIBE_SERVER_URL: process.env.STAGING_TRANSCRIBE_SERVER_URL,
+    RECOGNITION_SERVER_URL: 'https://tarteel-voice-fe.now.sh/',
+    TRANSCRIBE_SERVER_URL: 'https://tarteel-voice-fe.now.sh/',
     API_URL: process.env.STAGING_API_URL,
   },
   production: {
     TARTEEL_API_KEY: process.env.TARTEEL_API_KEY,
-    RECOGNITION_SERVER_URL: process.env.RECOGNITION_SERVER_URL,
-    TRANSCRIBE_SERVER_URL: process.env.TRANSCRIBE_SERVER_URL,
+    RECOGNITION_SERVER_URL: 'https://tarteel-voice-fe.now.sh/',
+    TRANSCRIBE_SERVER_URL: 'https://tarteel-voice-fe.now.sh/',
     API_URL: process.env.API_URL,
   },
 };
